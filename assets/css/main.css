@@ -176,6 +176,7 @@ input, select, textarea {
 	h2 {
 		font-size: 2em;
 		letter-spacing: -0.015em;
+		text-align: left;
 	}
 
 	h3 {
@@ -211,15 +212,66 @@ input, select, textarea {
 		header > p {
 			font-size: 1.25em;
 			margin: 0;
+			
 		}
 
 	footer {
-		margin: 3em 0 0 0;
+		
 	}
 
 		footer > p {
 			font-size: 1.25em;
 		}
+	.fixP {
+		text-align: left;
+		font-size: 1.8em;
+		line-height: 1.5em;
+	  }
+	.aboutMe {
+		background-color: rgb(196, 212, 225);
+		width: 100%;
+		margin: 3em 0 0 0;
+
+	  }
+
+	.horizontal-menu {
+	margin: 0 10% 0 10%;
+	align-items: center;
+	justify-content: center;
+
+
+	
+	}
+	
+	.horizontal-menu ul {
+	list-style: none;
+	margin: 10px;
+	padding: 10px;
+	display: flex;
+	}
+	
+	.horizontal-menu li {
+		text-align: center;
+		padding: 1px; /* Adjust padding as needed */
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	  }
+	  
+	  .horizontal-menu a {
+		text-decoration: none;
+		color: #2ecc71; /* Text color */
+		transition: color 0.3s;
+		padding: 1px 30px; /* Adjust padding for text spacing */
+		border: 1.2px solid #2ecc71; /* Green border around each item */
+		border-radius: 7px; /* Smooth curved corners */
+		margin: 2pt; /* Add space between borders */
+	  }
+	
+	.horizontal-menu a:hover {
+	color: #2ecc71; /* Green color on hover */
+	}
 
 /* Container */
 
@@ -281,6 +333,9 @@ input, select, textarea {
 				}
 
 		}
+		.tittlePort {
+			
+		}
 
 /* Row */
 
@@ -289,6 +344,8 @@ input, select, textarea {
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
+		padding: 0;
+    	margin: 0;
 	}
 
 		.row > * {
@@ -665,7 +722,20 @@ input, select, textarea {
 				.row > .off-12-xlarge {
 					margin-left: 100%;
 				}
-
+				.row > .col-13 {
+					width: center;
+				}
+				.col-4 {
+					width: 33.33333%;
+				}
+				
+				.col-8 {
+					width: 66.66667%;
+				}
+				col-4,
+				.col-8 {
+				    padding: 10px;
+				}
 				.row.gtr-0 {
 					margin-top: 0px;
 					margin-left: 0px;
@@ -2004,7 +2074,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #f4f4f4;
+			background-color: rgb(247, 248, 250);
 			text-shadow: 1px 1px 0px #fff;
 		}
 
@@ -2252,9 +2322,14 @@ input, select, textarea {
 				letter-spacing: 0;
 			}
 
-			h1, h2, h3, h4, h5, h6 {
+			h1, h3, h4, h5, h6 {
 				font-size: 1.25em;
 				margin: 0 0 0.4em 0;
+			}
+			h2 {
+				font-size: 1.25em;
+				margin: 0 0 0.4em 0;
+				text-align: left;
 			}
 
 			h1 {
@@ -2445,3 +2520,68 @@ input, select, textarea {
 	}
 
 
+
+/* Apply flexbox to the '.aboutMe' container */
+				
+				
+				.main-container {
+					display: flex;
+					flex-wrap: wrap;
+					background-color: rgb(196, 212, 225);
+				}
+				
+				.image-part {
+					flex: 1;
+					max-width: 30%;
+					padding: 60px 15px 20px 0px;
+					box-sizing: border-box;
+					order: 1;
+					display: flex;
+					flex-direction: column; 
+					justify-content: flex-end;
+					align-items: center;
+				}
+				
+				.image-part img {
+					width: 100%;
+					height: auto;
+				}
+				
+				.text-part {
+					flex: 2;
+					max-width: 66.66%;
+					padding: 15px;
+					box-sizing: border-box;
+					order: 2; /* Reorder the text to be on the right */
+				}
+				
+				/* Media query for smaller screens */
+				@media screen and (max-width: 768px) {
+					.main-container {
+						flex-direction: column;
+					}
+				
+					.image-part,
+					.text-part {
+						max-width: 100%;
+						order: 0; /* Reset the order on smaller screens */
+					}
+				}
+				#top .text-part {
+					margin-: 0px; /* Adjust the margin-top value */
+					/* Other styles as needed */
+				}
+				
+				#top .text-part p {
+					font-size: 20px; /* Adjust the font size as needed */
+    				line-height: 1.6; /* Adjust the line height as needed */
+    				margin-bottom: 15px; /* Add spacing between paragraphs */
+    				color: #333; /* Set the text color */
+				}
+				
+				#top .text-part p:first-child {
+					font-size: 30px; /* Adjust the font size for the first paragraph */
+				}
+				.text-center {
+					text-align: center;
+				}
